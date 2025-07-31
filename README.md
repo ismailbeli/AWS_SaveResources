@@ -78,6 +78,29 @@ After it's up and running, your Spring Boot app can connect to the database at `
 ```bash
 ./mvnw spring-boot:run
 ```
+## ▶️ First-Time Sync Trigger
+
+After starting the application, initiate the first data synchronization by visiting:
+
+```
+http://localhost:8080/api/aws-resources/sync
+```
+
+You can open this URL in your browser or trigger it using tools like Postman or curl.
+
+<img src="images/trigger-sync.png" alt="Trigger Sync Endpoint" width="600"/>
+
+## 🗃️ Sample AWS Resource Data View
+
+The data retrieved from AWS Resource Explorer is stored in PostgreSQL. Below is an example of the resource list viewed via a database client:
+
+<img src="images/aws-resource-list.png" alt="AWS Resource List in DB" width="600"/>
+
+## 🔁 Liquibase Migration History
+
+Liquibase automatically manages schema changes and keeps track of all migrations applied to the database.
+
+<img src="images/liquibase-history.png" alt="Liquibase Migration Log" width="600"/>
 
 ## 🔁 Data Refresh Process
 
@@ -108,6 +131,7 @@ aws-resource-explorer/
 │       └── resources/
 │           ├── application.properties
 │           └── db/changelog/
+├── images/
 ├── pom.xml
 └── README.md
 ```
