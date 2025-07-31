@@ -138,4 +138,4 @@ aws-resource-explorer/
 
 ## 📄 License
 
-MIT License. See the [LICENSE](./LICENSE) file for details.
+See the [LICENSE](./LICENSE) file for details.
